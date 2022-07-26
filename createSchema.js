@@ -10,10 +10,10 @@ const logResponse = (data) => {
 
 const createSchema = async () => {
     const schema = {
-        name: 'ClassesExample',
+        name: 'ClassesExample1',
         labels: {
-          singular: 'ClassesExample',
-          plural: 'ClassesExample',
+          singular: 'ClassesExample1',
+          plural: 'ClassesExample1',
         },
         searchableProperties: ["class_id"],
         primaryDisplayProperty: "class_id",
@@ -294,7 +294,7 @@ const createSchema = async () => {
 
     let response = await hubspotClient.crm.schemas.coreApi.create(schema);
     logResponse(response)
-    console.log('columnObjectTypeId = ' + response.body.objectTypeId)
+    console.log('columnObjectTypeId = ' + response.objectTypeId)
 }
 
 createSchema();

@@ -11,11 +11,8 @@ const logResponse = (data) => {
 
 async function importFile(fileName, ObjectTypeId) {
     const importFileReadStream = {
-        value: fs.readFileSync(fileName, "utf8"),
-        options: {
-            filename: fileName,
-            contentType: 'text/csv',
-        },
+        data: fs.readFileSync(fileName, "utf8"),
+        name: fileName,
     }
     const importRequest = {
         name: 'import(' + fileName + ')',
